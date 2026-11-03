@@ -8,7 +8,7 @@ declare(strict_types=1);
  * LICENSE.txt file that was distributed with this source code.
  */
 
-namespace PSB\PsbFrontendVariables\Domain\Repository;
+namespace PSBits\FrontendVariables\Domain\Repository;
 
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
@@ -17,7 +17,7 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
 /**
  * Class FrontendVariableRepository
  *
- * @package PSB\PsbFrontendVariables\Domain\Repository
+ * @package PSBits\FrontendVariables\Domain\Repository
  */
 class FrontendVariableRepository extends Repository
 {

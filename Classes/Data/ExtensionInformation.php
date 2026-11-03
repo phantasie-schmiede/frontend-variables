@@ -8,17 +8,17 @@ declare(strict_types=1);
  * LICENSE.txt file that was distributed with this source code.
  */
 
-namespace PSB\PsbFrontendVariables\Data;
+namespace PSBits\FrontendVariables\Data;
 
-use PSB\PsbFoundation\Data\AbstractExtensionInformation;
-use PSB\PsbFoundation\Data\ModuleConfiguration;
-use PSB\PsbFrontendVariables\Controller\Backend\FrontendVariableController;
+use PSBits\Foundation\Data\AbstractExtensionInformation;
+use PSBits\Foundation\Data\ModuleConfiguration;
+use PSBits\FrontendVariables\Controller\Backend\FrontendVariableController;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * Class ExtensionInformation
  *
- * @package PSB\PsbFrontendVariables\Data
+ * @package PSBits\FrontendVariables\Data
  */
 class ExtensionInformation extends AbstractExtensionInformation
 {
