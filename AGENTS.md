@@ -73,3 +73,18 @@ used in any content. PHP namespace: `PSBits\FrontendVariables\`.
 - `Configuration/Services.yaml` — DI wiring.
 - `ext_conf_template.txt` — extension settings (variable marker syntax); still in use.
 - `Resources/Private/Templates/Backend/` — Fluid templates for the backend module.
+
+## Foundation integration
+
+This extension builds on `psbits/foundation`, so it deliberately deviates from the standard TYPO3
+layout. Full conventions: `psbits-foundation` skill (`.opencode/skills/psbits-foundation/SKILL.md`).
+
+- TCA is generated at boot from the `#[Ctrl]`/`#[Column]` attributes in `Classes/Domain/Model/` -
+  there are no `Configuration/TCA/<table>.php` files for own models; do not create them.
+- There is no `ext_tables.sql`; the schema of `tx_frontendvariables_domain_model_frontendvariable`
+  is derived from the TCA attributes at boot. Do not create the file.
+- The backend module is registered in `Classes/Data/ExtensionInformation.php`
+  (`addModule()`); `Configuration/Backend/Modules.php` is a thin wrapper - never add logic there.
+  No `ext_localconf.php` is needed.
+- Module labels (`mlang_labels_tabdescr`, `mlang_labels_tablabel`, `mlang_tabs_tab`) belong in
+  `Resources/Private/Language/Backend/Modules/[moduleName].xlf` (lower-case file name).
