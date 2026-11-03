@@ -1,0 +1,8 @@
+includes:
+  - ../../.Build/vendor/psbits/qa/Resources/Quality/phpstan.neon
+  - ../../.Build/vendor/saschaegerer/phpstan-typo3/extension.neon
+
+parameters:
+  tmpDir: .phpstan
+  paths:
+    - ../../Classes

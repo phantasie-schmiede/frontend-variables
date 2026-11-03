@@ -1,21 +1,22 @@
 <?php
+
 declare(strict_types=1);
 
 /*
- * This file is part of PSB Frontend Variables.
+ * This file is part of PSBits Frontend Variables.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  */
 
-namespace PSB\PsbFrontendVariables\Controller\Backend;
+namespace PSBits\FrontendVariables\Controller\Backend;
 
 use Exception;
-use PSB\PsbFoundation\Attribute\ModuleAction;
-use PSB\PsbFoundation\Controller\Backend\AbstractModuleController;
-use PSB\PsbFoundation\Service\GlobalVariableProviders\RequestParameterProvider;
-use PSB\PsbFoundation\Service\GlobalVariableService;
-use PSB\PsbFrontendVariables\Service\FrontendVariableService;
+use PSBits\Foundation\Attribute\ModuleAction;
+use PSBits\Foundation\Controller\Backend\AbstractModuleController;
+use PSBits\Foundation\Service\GlobalVariableProviders\RequestParameterProvider;
+use PSBits\Foundation\Service\GlobalVariableService;
+use PSBits\FrontendVariables\Service\FrontendVariableService;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Backend\Template\ModuleTemplateFactory;
 use function is_int;
@@ -23,7 +24,7 @@ use function is_int;
 /**
  * Class FrontendVariableController
  *
- * @package PSB\PsbFrontendVariables\Controller\Backend
+ * @package PSBits\FrontendVariables\Controller\Backend
  */
 class FrontendVariableController extends AbstractModuleController
 {

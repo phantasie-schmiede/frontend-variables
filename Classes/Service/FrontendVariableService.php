@@ -1,19 +1,20 @@
 <?php
+
 declare(strict_types=1);
 
 /*
- * This file is part of PSB Frontend Variables.
+ * This file is part of PSBits Frontend Variables.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  */
 
-namespace PSB\PsbFrontendVariables\Service;
+namespace PSBits\FrontendVariables\Service;
 
-use PSB\PsbFoundation\Service\ExtensionInformationService;
-use PSB\PsbFrontendVariables\Data\ExtensionInformation;
-use PSB\PsbFrontendVariables\Domain\Model\FrontendVariable;
-use PSB\PsbFrontendVariables\Domain\Repository\FrontendVariableRepository;
+use PSBits\Foundation\Service\ExtensionInformationService;
+use PSBits\FrontendVariables\Data\ExtensionInformation;
+use PSBits\FrontendVariables\Domain\Model\FrontendVariable;
+use PSBits\FrontendVariables\Domain\Repository\FrontendVariableRepository;
 use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException;
 use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -22,7 +23,7 @@ use TYPO3\CMS\Core\Utility\RootlineUtility;
 /**
  * Class FrontendVariableService
  *
- * @package PSB\PsbFrontendVariables\Service
+ * @package PSBits\FrontendVariables\Service
  */
 class FrontendVariableService
 {

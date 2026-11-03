@@ -1,28 +1,29 @@
 <?php
+
 declare(strict_types=1);
 
 /*
- * This file is part of PSB Frontend Variables.
+ * This file is part of PSBits Frontend Variables.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  */
 
-namespace PSB\PsbFrontendVariables\Domain\Model;
+namespace PSBits\FrontendVariables\Domain\Model;
 
 use JsonException;
-use PSB\PsbFoundation\Attribute\TCA\ColumnType\Input;
-use PSB\PsbFoundation\Attribute\TCA\Ctrl;
-use PSB\PsbFoundation\Utility\StringUtility;
+use PSBits\Foundation\Attribute\TCA\ColumnType\Input;
+use PSBits\Foundation\Attribute\TCA\Ctrl;
+use PSBits\Foundation\Utility\StringUtility;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
-use TYPO3\CMS\Extbase\Configuration\Exception\InvalidConfigurationTypeException;
+use ReflectionException;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /**
  * Class FrontendVariable
  *
- * @package PSB\PsbFrontendVariables\Domain\Model
+ * @package PSBits\FrontendVariables\Domain\Model
  */
 #[Ctrl(ignorePageTypeRestriction: true, label: 'name', rootLevel: -1)]
 class FrontendVariable extends AbstractEntity
@@ -45,9 +46,9 @@ class FrontendVariable extends AbstractEntity
 
     /**
      * @throws ContainerExceptionInterface
-     * @throws InvalidConfigurationTypeException
      * @throws JsonException
      * @throws NotFoundExceptionInterface
+     * @throws ReflectionException
      */
     public function getValue(): string
     {

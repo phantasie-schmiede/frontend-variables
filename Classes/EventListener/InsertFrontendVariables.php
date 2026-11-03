@@ -1,17 +1,18 @@
 <?php
+
 declare(strict_types=1);
 
 /*
- * This file is part of PSB Frontend Variables.
+ * This file is part of PSBits Frontend Variables.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  */
 
-namespace PSB\PsbFrontendVariables\EventListener;
+namespace PSBits\FrontendVariables\EventListener;
 
 use JsonException;
-use PSB\PsbFrontendVariables\Service\FrontendVariableService;
+use PSBits\FrontendVariables\Service\FrontendVariableService;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException;
@@ -22,7 +23,7 @@ use TYPO3\CMS\Frontend\Event\AfterCacheableContentIsGeneratedEvent;
 /**
  * Class InsertFrontendVariables
  *
- * @package PSB\PsbFrontendVariables\EventListener
+ * @package PSBits\FrontendVariables\EventListener
  */
 class InsertFrontendVariables
 {
